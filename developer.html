@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Name</title>
+    <script>
+        function displayChoice(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+            const selectedName = document.querySelector('input[name="people"]:checked');
+            if (selectedName) {
+                document.getElementById('result').textContent = `You chose: ${selectedName.value}`;
+            } else {
+                document.getElementById('result').textContent = 'Please select a name.';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Select a Name</h1>
+<form onsubmit="displayChoice(event)">
+    <label><input type="radio" name="people" value="Mafita"> 1</label><br>
+    <label><input type="radio" name="people" value="Lugendo"> 2</label><br>
+    <label><input type="radio" name="people" value="Bilagi"> 3</label><br>
+    <label><input type="radio" name="people" value="Masoud"> 4</label><br>
+    <label><input type="radio" name="people" value="Kassanga"> 5</label><br>
+    <label><input type="radio" name="people" value="Omary"> 6</label><br>
+    <label><input type="radio" name="people" value="Kubaja"> 7</label><br>
+    <label><input type="radio" name="people" value="Philipo"> 8</label><br>
+    <label><input type="radio" name="people" value="Mallya"> 9</label><br>
+    <label><input type="radio" name="people" value="Mtezo"> 10</label><br>
+    <label><input type="radio" name="people" value="Kawiche"> 11</label><br>
+    <label><input type="radio" name="people" value="Ng'wagala"> 12</label><br>
+    <label><input type="radio" name="people" value="Ngatumbura"> 13</label><br>
+    <label><input type="radio" name="people" value="Salum"> 14</label><br>
+    <label><input type="radio" name="people" value="Kabandika"> 15</label><br>
+    <label><input type="radio" name="people" value="Mgurukwenda"> 16</label><br>
+    <label><input type="radio" name="people" value="Mwalusamba"> 17</label><br>
+    <label><input type="radio" name="people" value="Mussa"> 18</label><br>
+    <label><input type="radio" name="people" value="Temihanga"> 19</label><br>
+    <label><input type="radio" name="people" value="Mtika"> 20</label><br>
+    <label><input type="radio" name="people" value="Wama"> 21</label><br>
+    <label><input type="radio" name="people" value="Idarous"> 22</label><br>
+    </label><br>
+  
+    <input type="submit" value="Submit">
+</form>
+
+<div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+</body>
+</html>
